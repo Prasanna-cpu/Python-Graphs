@@ -1,4 +1,4 @@
-def dfs_with_cycle_detection_adj_matrix(adj_matrix, start, visited, parent):
+def DFSCycleMatrix(adj_matrix, start, visited, parent):
     visited[start] = True
 
     for neighbor in range(len(adj_matrix)):
@@ -24,4 +24,4 @@ parent = [-1] * num_vertices
 
 for vertex in range(num_vertices):
     if not visited[vertex]:
-        dfs_with_cycle_detection_adj_matrix(adjacency_matrix, vertex, visited, parent)
+        DFSCycleMatrix(adjacency_matrix, vertex, visited, parent)
