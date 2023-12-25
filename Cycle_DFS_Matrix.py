@@ -5,7 +5,7 @@ def DFSCycleMatrix(adj_matrix, start, visited, parent):
         if adj_matrix[start][neighbor] == 1:  # Assuming 1 represents an edge
             if not visited[neighbor]:
                 parent[neighbor] = start
-                dfs_with_cycle_detection_adj_matrix(adj_matrix, neighbor, visited, parent)
+                DFSCycleMatrix(adj_matrix, neighbor, visited, parent)
             elif parent[start] != neighbor:
                 # If the neighbor is already visited and not the parent, then it's a cycle
                 print(f"Cycle detected: {start} -> {neighbor}")
